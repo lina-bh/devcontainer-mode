@@ -1,5 +1,9 @@
 name: Testing images
-on: [push, workflow_dispatch]
+on:
+  - workflow_dispatch
+  - push:
+      paths:
+        - Containerfile.dev
 jobs:
   build:
     runs-on: ubuntu-latest
